@@ -28,23 +28,7 @@ function App() {
           <OrderContens
             order={order}
           />
-          <div className="space-y-3 mt-5">
-            {order.length === 0 ?
-              <p className="text-center"> La orden esta vacia</p>
-              :(
-                order.map( item => (
-                  <div key={item.id}> 
-                    <p>
-                      {item.name}
-                    </p>
-                  </div>
-                )
-
-                )
-              )
-            }
-
-          </div>
+          
         </div>
       </main>
     </>
