@@ -17,11 +17,10 @@ const tipOptions = [
 ]
 type TipPercentageFormProps = {
     setTip: React.Dispatch<React.SetStateAction<number>>
-    tip: number
 
 }
 
-function TipPercentageForm({tip,setTip}: TipPercentageFormProps) {
+function TipPercentageForm({setTip}: TipPercentageFormProps) {
     return (
         <div>
             <h3 className="font-black text-2xl"> Propina: </h3>
