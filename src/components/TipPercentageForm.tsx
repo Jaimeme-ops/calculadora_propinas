@@ -15,8 +15,13 @@ const tipOptions = [
         label: '50%'
     },
 ]
+type TipPercentageFormProps = {
+    setTip: React.Dispatch<React.SetStateAction<number>>
+    tip: number
 
-function TipPercentageForm() {
+}
+
+function TipPercentageForm({tip,setTip}: TipPercentageFormProps) {
     return (
         <div>
             <h3 className="font-black text-2xl"> Propina: </h3>
@@ -29,6 +34,7 @@ function TipPercentageForm() {
                             type="radio"
                             name='tip'
                             value={tip.value}
+                            onChange={e => setTip(+e.target.value)}
                         />
                     </div>
 

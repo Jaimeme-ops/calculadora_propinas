@@ -6,7 +6,7 @@ import { menuItems } from "./data/db"
 import useOrder from "./hooks/useOrder"
 
 function App() {
-  const { addItem, order, removeItem } = useOrder()
+  const { addItem, order, removeItem, tip, setTip } = useOrder()
 
   return (
     <>
@@ -32,7 +32,10 @@ function App() {
             order={order}
             removeItem={removeItem}
           />
-          <TipPercentageForm/>
+          <TipPercentageForm
+            setTip={setTip}
+            tip={tipS}
+          />
           <OrderTotals
             order={order}
           />
